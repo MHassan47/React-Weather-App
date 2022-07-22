@@ -1,3 +1,14 @@
+# About the Project
+
+A weather app that uses [OpenWeather](https://openweathermap.org/) API to display the weather details of any given city.
+
+!["This is the user interface of a warm city'](https://github.com/MHassan47/React-Weather-App/blob/master/src/assets/los_angeles_weather.PNG?raw=true)
+!["This is the user interface of a warm city"](https://github.com/MHassan47/React-Weather-App/blob/master/src/assets/san_francisco_weather.PNG?raw=true)
+
+# Setup
+
+Install dependencies with `npm install`.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +79,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Dependencies
+
+- React
+- Axios
+- React Icons
