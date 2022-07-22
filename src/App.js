@@ -20,8 +20,8 @@ function App() {
       });
     }
   };
-  console.log(location);
-  console.log(data);
+  // const sunrise = new Date((data.sys.sunrise + data.timezone) * 1000);
+  // console.log({ sunrise });
   return (
     <div
       className={
@@ -46,14 +46,18 @@ function App() {
           </div>
         </div>
         <div className="header">
-          <div className="location">
-            <div className="location_icon">
-              <MdLocationOn />
+          {data.main ? (
+            <div className="location">
+              <div className="location_icon">
+                <MdLocationOn />
+              </div>
+              <span>
+                {data.name}, {data.sys.country}
+              </span>
             </div>
-            <span>{data.name}</span>
-          </div>
+          ) : null}
           <div className="temperature">
-            {data.main ? <h1>{Math.round(data.main.temp)}°C</h1> : <p>°C</p>}
+            {data.main ? <h1>{Math.round(data.main.temp)}°C</h1> : null}
           </div>
         </div>
         <div className="weather_info">
@@ -63,15 +67,15 @@ function App() {
             ) : (
               <p>N/A</p>
             )}
-            <p>Feels like</p>
+            <div>Feels like</div>
           </div>
           <div className="humidity">
             {data.main ? <p>{Math.round(data.main.humidity)}%</p> : <p>N/A</p>}
-            <p>Humidity</p>
+            <div>Humidity</div>
           </div>
           <div className="wind">
             {data.wind ? <p>{Math.round(data.wind.speed)}MPH</p> : <p>N/A</p>}
-            <p>Wind Speed</p>
+            <div>Wind Speed</div>
           </div>
         </div>
       </div>
