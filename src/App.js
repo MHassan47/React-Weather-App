@@ -38,20 +38,24 @@ function App() {
         <div className="header">
           <div className="location">{data.name}</div>
           <div className="temperature">
-            {data.main ? <h1>{data.main.temp}°C</h1> : <p>°C</p>}
+            {data.main ? <h1>{Math.round(data.main.temp)}°C</h1> : <p>°C</p>}
           </div>
         </div>
         <div className="weather_info">
           <div className="feels_like">
-            {data.main ? <p>{data.main.feels_like}°C</p> : <p>N/A</p>}
+            {data.main ? (
+              <p>{Math.round(data.main.feels_like)}°C</p>
+            ) : (
+              <p>N/A</p>
+            )}
             <p>Feels like</p>
           </div>
           <div className="humidity">
-            {data.main ? <p>{data.main.humidity}%</p> : <p>N/A</p>}
+            {data.main ? <p>{Math.round(data.main.humidity)}%</p> : <p>N/A</p>}
             <p>Humidity</p>
           </div>
           <div className="wind">
-            {data.wind ? <p>{data.wind.speed}MPH</p> : <p>N/A</p>}
+            {data.wind ? <p>{Math.round(data.wind.speed)}MPH</p> : <p>N/A</p>}
             <p>Wind Speed</p>
           </div>
         </div>
