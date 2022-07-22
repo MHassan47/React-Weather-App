@@ -23,7 +23,15 @@ function App() {
   console.log(location);
   console.log(data);
   return (
-    <div className="app">
+    <div
+      className={
+        typeof data.main != "undefined"
+          ? data.main.temp > 16
+            ? "app_warm"
+            : "app"
+          : "app"
+      }
+    >
       <div className="container">
         <div className="search">
           <input
@@ -70,5 +78,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
