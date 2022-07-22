@@ -3,6 +3,8 @@ import "./App.css";
 import "./index";
 import axios from "axios";
 import { FaSearch } from "react-icons/fa";
+import { MdLocationOn } from "react-icons/md";
+
 function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
@@ -36,7 +38,12 @@ function App() {
           </div>
         </div>
         <div className="header">
-          <div className="location">{data.name}</div>
+          <div className="location">
+            <div className="location_icon">
+              <MdLocationOn />
+            </div>
+            <span>{data.name}</span>
+          </div>
           <div className="temperature">
             {data.main ? <h1>{Math.round(data.main.temp)}°C</h1> : <p>°C</p>}
           </div>
