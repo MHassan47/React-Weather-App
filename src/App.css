@@ -12,7 +12,14 @@ h1 {
   font-size: 6rem;
   opacity: 0.5;
 }
+p {
+  font-weight: 600;
+  font-size: 28px;
+}
 
+div {
+  font-size: 20px;
+}
 .search {
   display: flex;
   justify-content: center;
@@ -67,8 +74,9 @@ h1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
   border-radius: 80px;
-  width: 70vw;
+  width: 85vw;
   height: 150px;
   background-color: rgba(255, 255, 255, 0.4);
 }
