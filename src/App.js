@@ -16,7 +16,6 @@ function App() {
     if (event.key === "Enter" || event.onClick) {
       axios.get(url).then((response) => {
         setData(response.data);
-        console.log(response);
       });
     }
   };
