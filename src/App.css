@@ -3,9 +3,16 @@
   flex-direction: column;
   justify-content: space-around;
 }
+span {
+  font-size: 3rem;
+  font-weight: 600;
+  opacity: 0.4;
+}
 h1 {
   font-size: 6rem;
+  opacity: 0.5;
 }
+
 .search {
   display: flex;
   justify-content: center;
@@ -39,12 +46,26 @@ h1 {
   align-items: center;
 }
 
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.location_icon {
+  font-size: 34px;
+  color: #fff;
+  opacity: 0.5;
+  margin-bottom: -10px;
+}
 .weather_info {
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-radius: 80px;
-  width: 800px;
+  width: 70vw;
   height: 150px;
   background-color: rgba(255, 255, 255, 0.4);
 }
